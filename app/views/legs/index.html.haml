@@ -1,0 +1,17 @@
+%h1 Listing legs
+
+%table
+  %tr
+    %th
+    %th
+    %th
+
+  - @legs.each do |leg|
+    %tr
+      %td= link_to 'Show', leg
+      %td= link_to 'Edit', edit_leg_path(leg)
+      %td= link_to 'Destroy', leg, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Leg', new_leg_path
