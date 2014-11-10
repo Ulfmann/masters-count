@@ -55,6 +55,6 @@ class LegsController < ApplicationController
     end
 
     def leg_params
-      params[:leg]
+      params.require(:leg).permit(rounds_attributes: [:first_throw, :second_throw, :third_throw])
     end
 end
