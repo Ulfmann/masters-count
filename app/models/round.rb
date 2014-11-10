@@ -1,8 +1,7 @@
 class Round
   include Mongoid::Document
 
-  embedded_in :leg
-  embeds_many :throws
+  belongs_to :leg
 
   field :first_throw, type: Integer
   field :second_throw, type: Integer
