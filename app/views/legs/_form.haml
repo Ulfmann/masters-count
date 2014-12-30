@@ -6,16 +6,9 @@
         - @leg.errors.full_messages.each do |msg|
           %li= msg
 
-  = f.fields_for :rounds do |ff|
-    %fieldset
-      = ff.label :first_throw, '1. Wurf'
-      = ff.text_field :first_throw, size: 10
-
-      = ff.label :second_throw, '2. Wurf'
-      = ff.text_field :second_throw, size: 10
-
-      = ff.label :third_throw, '3. Wurf'
-      = ff.text_field :third_throw, size: 10
+  .current-leg-score
+    = @leg.score
 
   .actions
-    = f.submit 'Save'
+    - (1..20).each do |score_field|
+      = link_to score_field, '', remote: true, class: 'score-field'
