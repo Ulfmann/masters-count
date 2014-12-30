@@ -12,6 +12,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
+  gem 'pry-rails'
 end
 
 # Use ActiveModel has_secure_password
