@@ -5,4 +5,9 @@ class Leg
 
   has_many :rounds
   accepts_nested_attributes_for :rounds
+
+  def reduce_by(count)
+    self.score -= count
+    score
+  end
 end
