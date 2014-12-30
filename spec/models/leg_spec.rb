@@ -1,5 +1,11 @@
 require 'rails_helper'
 
-RSpec.describe Leg, :type => :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Leg do
+  before do
+    @leg = Leg.new
+  end
+
+  it 'has a score' do
+    expect(@leg).to respond_to :score
+  end
 end
