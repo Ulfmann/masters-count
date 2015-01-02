@@ -8,6 +8,5 @@ class Leg
 
   def reduce_by(count)
     self.score -= count
-    score
   end
 end
