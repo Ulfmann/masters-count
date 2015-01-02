@@ -35,7 +35,7 @@ class LegsController < ApplicationController
     respond_to do |format|
       if @leg.save
         format.html { redirect_to @leg, notice: 'Leg was successfully updated.' }
-        format.json { render :show, status: :ok, location: @leg }
+        format.json { render :score, status: :ok, location: @leg }
       else
         format.html { render :edit }
         format.json { render json: @leg.errors, status: :unprocessable_entity }
