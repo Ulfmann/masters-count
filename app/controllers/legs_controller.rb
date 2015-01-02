@@ -55,6 +55,6 @@ class LegsController < ApplicationController
     end
 
     def leg_params
-      params.require(:leg).permit(:score)
+      params.permit(:score)
     end
 end
