@@ -11,7 +11,8 @@ describe Leg do
 
   it 'reduces its score' do
     @leg.score = 501
-    expect(@leg.reduce_by(51)).to eq 450
+    expect{ @leg.reduce_by(51) }.to change{ @leg.score }.from(501).to(450)
+  end
 
   it 'returns to the starting value if the score exceeds' do
     @leg.score = 32
