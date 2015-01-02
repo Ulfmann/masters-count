@@ -8,6 +8,8 @@ class Leg
   accepts_nested_attributes_for :rounds
 
   def reduce_by(count)
-    self.score -= count
+    if count <= self.score
+      self.score -= count
+    end
   end
 end
