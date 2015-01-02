@@ -30,8 +30,10 @@ class LegsController < ApplicationController
   end
 
   def update
+    @leg.reduce_by(params[:score].to_i)
+
     respond_to do |format|
-      if @leg.update(leg_params)
+      if @leg.save
         format.html { redirect_to @leg, notice: 'Leg was successfully updated.' }
         format.json { render :show, status: :ok, location: @leg }
       else
