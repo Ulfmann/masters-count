@@ -1,4 +1,4 @@
-= form_for @leg, url: leg_path do |f|
+= form_for @leg do |f|
   - if @leg.errors.any?
     #error_explanation
       %h2= "#{pluralize(@leg.errors.count, "error")} prohibited this leg from being saved:"
