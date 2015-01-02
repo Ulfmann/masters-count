@@ -1,5 +1,6 @@
 class Leg
   include Mongoid::Document
+  include Mongoid::Timestamps
 
   field :score, type: Integer
 
