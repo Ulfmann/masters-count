@@ -6,9 +6,8 @@
         - @leg.errors.full_messages.each do |msg|
           %li= msg
 
-  .current-leg-score
+  .current-leg-score#leg-score{ data: { id: @leg.id } }
     = @leg.score
 
   .actions
-    - (1..20).each do |score_field|
-      %a.score-field{ href: '#', data: { score: score_field } } #{score_field}
+    %a.score-field{ href: '#', data: { score: 20 } } 20
