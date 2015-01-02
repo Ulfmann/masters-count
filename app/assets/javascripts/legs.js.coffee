@@ -1,7 +1,7 @@
 jQuery ->
   $('form').on 'click', '.score-field', (event) ->
     id = $('#leg-score').data('id')
-    score = $('.score-field').data('score')
+    score = $(this).data('score')
 
     $.ajax "/legs/#{id}",
       type: "PUT",
