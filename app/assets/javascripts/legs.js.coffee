@@ -1,12 +1,12 @@
 jQuery ->
   $('form').on 'click', '.score-field', (event) ->
     currentScore = parseInt($(this).data('score'))
-    console.log "Geklickte Score ist #{score}"
+    console.log "Geklickte Score ist #{currentScore}"
 
     totalCurrentScore = $('#current-score').text()
-    console.log "Punkte vorher: #{scoreBisJetzt}"
+    console.log "Punkte vorher: #{totalCurrentScore}"
 
-    totalScore = parseInt(scoreBisJetzt) + parseInt(score)
+    totalScore = parseInt(totalCurrentScore) + parseInt(currentScore)
     console.log "Punkte nachher: #{totalScore}"
 
     $('#current-score').html(totalScore)
