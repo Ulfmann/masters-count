@@ -6,8 +6,14 @@
         - @leg.errors.full_messages.each do |msg|
           %li= msg
 
-  .current-leg-score#leg-score{ data: { id: @leg.id } }
-    = @leg.score
+  %dt Verbleibende Punktzahl:
+  .remaining-leg-score#leg-score{ data: { id: @leg.id } }
+    %dt= @leg.score
+
+  %dt Erzielte Punktzahl:
+  .current-score#current-score 0
+
+  %a.nextthrow{ href: '#' } Nächster Wurf
 
   .actions
     = render partial: 'score_fields'
