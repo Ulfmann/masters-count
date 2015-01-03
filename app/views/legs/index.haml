@@ -1,4 +1,4 @@
-%h1 Listing legs
+%h1 Gespielte Legs
 
 %table
   %tr
@@ -16,4 +16,4 @@
 
 %br
 
-= link_to 'New Leg', new_leg_path
+= link_to 'Neues Leg beginnen', { :controller => "legs", :action => "create" }, :method => "post"

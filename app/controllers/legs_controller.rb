@@ -20,8 +20,8 @@ class LegsController < ApplicationController
 
     respond_to do |format|
       if @leg.save
-        format.html { redirect_to @leg, notice: 'Leg was successfully created.' }
-        format.json { render :show, status: :created, location: @leg }
+        format.html { redirect_to edit_leg_path(@leg), notice: 'Game on!' }
+        format.json { render :edit, status: :created, location: @leg }
       else
         format.html { render :new }
         format.json { render json: @leg.errors, status: :unprocessable_entity }
