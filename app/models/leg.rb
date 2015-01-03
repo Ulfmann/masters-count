@@ -2,7 +2,7 @@ class Leg
   include Mongoid::Document
   include Mongoid::Timestamps
 
-  field :score, type: Integer
+  field :score, type: Integer, default: 501
 
   has_many :rounds
   accepts_nested_attributes_for :rounds

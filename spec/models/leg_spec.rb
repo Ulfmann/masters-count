@@ -9,6 +9,10 @@ describe Leg do
     expect(@leg).to respond_to :score
   end
 
+  it 'has a default value of 501' do
+    expect(Leg.new.score).to eq 501
+  end
+
   it 'reduces its score' do
     @leg.score = 501
     expect{ @leg.reduce_by(51) }.to change{ @leg.score }.from(501).to(450)
