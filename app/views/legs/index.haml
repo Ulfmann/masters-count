@@ -10,8 +10,8 @@
   - @legs.each do |leg|
     %tr
       %td= leg.created_at.strftime("%d %b %y")
-      %td= link_to 'Show', leg
-      %td= link_to 'Destroy', leg, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td= link_to image_tag('icon_lupe.gif'), leg
+      %td= link_to image_tag('trash-icon-16x16.gif'), leg, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
