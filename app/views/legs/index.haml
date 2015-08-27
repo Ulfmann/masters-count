@@ -11,7 +11,6 @@
     %tr
       %td= leg.created_at.strftime("%d %b %y")
       %td= link_to 'Show', leg
-      %td= link_to 'Edit', edit_leg_path(leg)
       %td= link_to 'Destroy', leg, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
