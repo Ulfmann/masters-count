@@ -23,12 +23,18 @@ jQuery ->
   $('form').on 'click', '.nextthrow', (event) ->
     id = $('#leg-score').data('id')
     score = $('#current-score').text()
+    darts = [
+      $('#current-score').data('dart1'),
+      $('#current-score').data('dart2'),
+      $('#current-score').data('dart3')
+    ]
 
     $.ajax "/legs/#{id}",
       type: "PUT",
       dataType: "JSON",
       data:
-        score: score
+        score: score,
+        darts: darts
       success: (data) ->
         $('#leg-score').html(data)
         $('#current-score').text(0)
