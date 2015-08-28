@@ -23,11 +23,11 @@ jQuery ->
   $('form').on 'click', '.nextthrow', (event) ->
     id = $('#leg-score').data('id')
     score = $('#current-score').text()
-    darts = [
-      $('#current-score').data('dart1'),
-      $('#current-score').data('dart2'),
-      $('#current-score').data('dart3')
-    ]
+    darts = {
+      first_dart: $('#current-score').data('dart1'),
+      second_dart: $('#current-score').data('dart2'),
+      third_dart: $('#current-score').data('dart3')
+    }
 
     $.ajax "/legs/#{id}",
       type: "PUT",
