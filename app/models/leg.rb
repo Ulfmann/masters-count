@@ -4,8 +4,8 @@ class Leg
 
   field :score, type: Integer, default: 501
 
-  has_many :rounds
-  accepts_nested_attributes_for :rounds
+  has_many :shots
+  accepts_nested_attributes_for :shots
 
   def reduce_by(count)
     if count <= self.score
