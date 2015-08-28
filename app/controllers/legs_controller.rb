@@ -31,7 +31,7 @@ class LegsController < ApplicationController
 
   def update
     @leg.reduce_by(params[:score].to_i)
-    @leg.shots.build(params[:darts])
+    @leg.shots.build(darts_params)
 
     respond_to do |format|
       if @leg.save
@@ -59,5 +59,9 @@ class LegsController < ApplicationController
 
     def leg_params
       params.permit(:score)
+    end
+
+    def darts_params
+      params.require(:darts).permit(:first_dart, :second_dart, :third_dart)
     end
 end
