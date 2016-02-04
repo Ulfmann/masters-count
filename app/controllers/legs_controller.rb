@@ -53,15 +53,15 @@ class LegsController < ApplicationController
   end
 
   private
-    def set_leg
-      @leg = Leg.find(params[:id])
-    end
+  def set_leg
+    @leg = Leg.find(params[:id])
+  end
 
-    def leg_params
-      params.permit(:score)
-    end
+  def leg_params
+    params.permit(:score)
+  end
 
-    def darts_params
-      params.require(:darts).permit(:first_dart, :second_dart, :third_dart)
-    end
+  def darts_params
+    params.require(:darts).permit(:first_dart, :second_dart, :third_dart)
+  end
 end
