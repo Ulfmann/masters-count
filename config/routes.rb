@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: 'matches#index'
+  root to: 'stats#index'
 
   resources :legs
 
